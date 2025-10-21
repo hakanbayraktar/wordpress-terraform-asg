@@ -67,14 +67,14 @@ terraform apply -var-file="terraform.dev.tfvars"
 ./scripts/download-vpn-config.sh
 
 # VPN'e bağlanın
-sudo openvpn --config ~/vpn/hakan.ovpn
+sudo openvpn --config ~/.vpn/hakan.ovpn
 ```
 
 ### 6. WordPress'e Erişin
 
 ```bash
 # WordPress URL'ini alın
-terraform output -var-file="terraform.dev.tfvars" wordpress_url
+terraform output wordpress_url
 
 # Tarayıcınızda açın
 ```
