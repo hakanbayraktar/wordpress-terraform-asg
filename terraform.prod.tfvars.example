@@ -1,0 +1,39 @@
+# Production Environment Configuration
+# Optimized for performance and high availability
+
+# Environment
+environment = "prod"
+
+# Project Name
+project_name = "wordpress-prod"
+
+# AWS Region
+aws_region = "us-east-1"
+
+# SSH Key Name
+key_name = "wordpress-key"
+
+# Database Configuration
+db_password = "CHANGE_ME_ProdPassword123!"  # ⚠️⚠️⚠️ CHANGE THIS! ⚠️⚠️⚠️
+db_instance_class = "db.t3.small"  # Production-grade
+allocated_storage = 50  # More storage for production
+
+# CloudWatch Alarms Email
+alarm_email = "production-team@example.com"  # ⚠️ CHANGE THIS!
+
+# Instance Types - t3.medium for production workloads
+bastion_instance_type = "t2.micro"  # Bastion can stay small
+wordpress_instance_type = "t3.medium"  # More power for WordPress
+vpn_instance_type = "t2.micro"  # VPN can stay small
+
+# Auto Scaling Configuration - Higher capacity for production
+asg_min_size = 2  # Always at least 2 for HA
+asg_max_size = 6  # Can scale up to 6 instances
+asg_desired_capacity = 2  # Start with 2
+
+# OpenVPN Configuration
+enable_vpn = true
+vpn_user = "hakan"
+
+# Security - Restrict SSH in production
+# allowed_ssh_cidr = "YOUR_OFFICE_IP/32"

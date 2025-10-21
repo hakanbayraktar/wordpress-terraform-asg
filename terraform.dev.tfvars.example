@@ -1,0 +1,39 @@
+# Development Environment Configuration
+# Cost-optimized configuration for testing and development
+
+# Environment
+environment = "dev"
+
+# Project Name
+project_name = "wordpress-dev"
+
+# AWS Region
+aws_region = "us-east-1"
+
+# SSH Key Name
+key_name = "wordpress-key"
+
+# Database Configuration
+db_password = "CHANGE_ME_DevPassword123!"  # ⚠️ CHANGE THIS!
+db_instance_class = "db.t3.micro"  # Smallest for dev
+allocated_storage = 20
+
+# CloudWatch Alarms Email
+alarm_email = "your-email@example.com"  # ⚠️ CHANGE THIS!
+
+# Instance Types - All t2.micro for cost savings in dev
+bastion_instance_type = "t2.micro"
+wordpress_instance_type = "t2.micro"
+vpn_instance_type = "t2.micro"
+
+# Auto Scaling Configuration - Minimal for dev
+asg_min_size = 1
+asg_max_size = 2
+asg_desired_capacity = 1
+
+# OpenVPN Configuration
+enable_vpn = true
+vpn_user = "hakan"
+
+# Security - Restrict SSH to your IP in dev
+# allowed_ssh_cidr = "YOUR_IP/32"

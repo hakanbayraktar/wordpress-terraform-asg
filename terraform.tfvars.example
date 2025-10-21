@@ -1,0 +1,31 @@
+################################################################################
+# ⚠️  IMPORTANT: This is a TEMPLATE file for multi-environment setup
+################################################################################
+#
+# DO NOT use this file directly!
+#
+# Instead, use environment-specific configuration files:
+#   - terraform.dev.tfvars.example  → For DEVELOPMENT environment
+#   - terraform.prod.tfvars.example → For PRODUCTION environment
+#
+# USAGE:
+#   1. Copy the appropriate .example file:
+#      cp terraform.dev.tfvars.example terraform.dev.tfvars
+#      OR
+#      cp terraform.prod.tfvars.example terraform.prod.tfvars
+#
+#   2. Edit your new file and change all placeholder values
+#
+#   3. Deploy using helper scripts:
+#      ./scripts/deploy-dev.sh   (for development)
+#      ./scripts/deploy-prod.sh  (for production)
+#
+# SECURITY:
+#   - NEVER commit terraform.dev.tfvars or terraform.prod.tfvars to Git
+#   - Only .example files are safe to commit
+#   - Your real .tfvars files are blocked by .gitignore
+#
+################################################################################
+
+# This file is deprecated. Please use environment-specific files instead.
+# See terraform.dev.tfvars.example or terraform.prod.tfvars.example
